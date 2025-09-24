@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=David+Libre&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>B.R.I.E.F.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/noura.png" type="image/x-icon">
+</head>
+<body>
+    <h1>B.R.I.E.F.</h1>
+
+    <div class="big-container" style="width: 25%;">
+        <div class="container">
+            <select id="parentTeacherSel">
+                <option value="">-- ?? --</option>
+                <option value="parent">הורה</option>
+                <option value="teacher">מורה</option>
+            </select>
+
+            <h3>סוג טופס</h3>
+        </div>
+        <p id="form-error">Please fill in the type of form WOMAN!</p>
+    </div>
+
+    <br>
+
+    <select id="sharedDropdown">
+        <option value="">-- ??? --</option>
+        <option value="1">אף פעם</option>
+        <option value="2">לפעמים</option>
+        <option value="3">תמיד</option>
+    </select>
+
+    <div class="big-container" style="width: 85%;">
+        <div class="container">
+            <table id="results">
+                <tr>
+                    <th>אחוזון</th>
+                    <th>ציון גלם</th>
+                    <th>קטגוריה</th>
+                </tr>
+                <tr>
+                    <td><span></span></td>
+                    <td><span id="inhibition"></span></td>
+                    <td style="color: red;"><b>אינהיביציה</b></td>
+                </tr>
+                <tr>
+                    <td><span></span></td>
+                    <td><span id="transitions"></span></td>
+                    <td style="color: blue;"><b>מעברים</b></td>
+                </tr>
+                <tr>
+                    <td><span></span></td>
+                    <td><span id="emotional-control"></span></td>
+                    <td style="color: green;"><b>שליטה רגשית</b></td>
+                </tr>
+                <tr style="background-color: #ddd;">
+                    <td><span></span></td>
+                    <td><span id="BRI"></span></td>
+                    <td>(BRI) ויסות התנהגות</td>
+                </tr>
+                <tr>
+                    <td><span></span></td>
+                    <td><span id="initiative"></span></td>
+                    <td style="color: gold;"><b>יזימה</b></td>
+                </tr>
+                <tr>
+                    <td><span></span></td>
+                    <td><span id="working-memory"></span></td>
+                    <td style="color: pink;"><b>זיכרון עובד</b></td>
+                </tr>
+                <tr>
+                    <td><span></span></td>
+                    <td><span id="planning"></span></td>
+                    <td style="color: deepskyblue;"><b>תכנון / ארגון</b></td>
+                </tr>
+                <tr>
+                    <td><span></span></td>
+                    <td><span id="enviromental-organization"></span></td>
+                    <td style="color: purple;"><b>ארגון סביבה</b></td>
+                </tr>
+                <tr>
+                    <td><span></span></td>
+                    <td><span id="monitoring"></span></td>
+                    <td style="color: #ffce18;"><b>ניטור</b></td>
+                </tr>
+                <tr style="background-color: #ddd;">
+                    <td><span></span></td>
+                    <td><span id="MI"></span></td>
+                    <td>(MI) מטה קוגניציה</td>
+                </tr>
+                <tr style="background-color: #ddd;">
+                    <td><span></span></td>
+                    <td><span id="GEC"></span></td>
+                    <td>GEC (BRI + MI) ציון כללי</td>
+                </tr>
+            </table>
+
+            <table id="questions">
+                <thead>
+                    <tr>
+                        <th>תדירות</th>
+                        <th>מס׳ שאלה</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <p id="field-error">WOMAN check that you filled all fields!</p>
+    </div>
+
+    <br>
+
+    <div id="buttons">
+        <button onclick="calculateScores()"><i class="fa fa-check"></i>Submit</button>
+        <button onclick="refresh()"><i class="fa fa-refresh"></i>Restart</button>
+        <button onclick="copyTable('questions')"><i class="fa fa-copy"></i>Copy</button>
+        <button onclick="menu()"><i class="fa fa-bars"></i>Menu</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

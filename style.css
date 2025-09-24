@@ -1,0 +1,150 @@
+#questions {
+  font-family: 'David', serif;
+  border-collapse: collapse;
+  width: 45%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#questions td, #questions th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#questions th {
+  padding: 12px;
+  height: 0.5cm;
+  background-color: #1b6736;
+  color: white;
+}
+
+#questions thead, tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+#questions tbody {
+  display: block;
+  height: 400px;
+  overflow: auto;
+}
+
+#questions tr:nth-child(even) {
+  background-color: #fff;
+}
+
+#questions tr:hover {
+  background-color: #ddd;
+}
+
+td.error {
+  background-color: rgba(255, 0, 0, 0.9) !important;
+}
+
+#results {
+  font-family: 'David', serif;
+  border-collapse: collapse;
+  width: 45%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#results td, #results th {
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  height: 0.5cm;
+  width: 2cm;
+  padding: 8px;
+}
+
+#results th {
+  border-bottom: 3px solid #ccc;
+}
+
+#results td {
+  border: 1px solid #ddd;
+}
+
+select {
+  width: 80%;
+  padding: 8px 15px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+button {
+  width: 35%;
+  background-color: #1b6736;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+#buttons {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+}
+
+button:hover {
+  background-color: #328c52;
+}
+
+i {
+  margin-right: 5px;
+}
+
+.container {
+  width: 100%;
+  align-items: baseline;
+  display: flex;
+  gap: 25px;
+  flex-direction: row;
+}
+
+.big-container {
+  flex-direction: column;
+  align-items: center;
+}
+
+#parentTeacherSel {
+  width: 50%;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#form-error, #field-error {
+  color: red;
+  display: none;
+}
+
+h1 {
+  color: #1b6736;
+}
