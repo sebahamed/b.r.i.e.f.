@@ -2,7 +2,7 @@ function generateTable() {
     const tableLayout = document.querySelector('#questions tbody');
     const dropdown = document.getElementById('sharedDropdown');
 
-    for(let i = 1; i <= 86; i++) {
+    for(let i = 1; i <= 73; i++) {
         const row = document.createElement("tr");
 
         const cell1 = document.createElement("td");
@@ -61,7 +61,7 @@ function calculateScores() {
     document.getElementById('form-error').style.display = "none";
 
     let error = false;
-    for(let i = 1; i <= 86; i++) {
+    for(let i = 1; i <= 72; i++) {
         const dropdownList = document.getElementById("dropdown" + i);
         const selectedOption = dropdownList.options[dropdownList.selectedIndex];
 
@@ -69,7 +69,16 @@ function calculateScores() {
             document.getElementById("question" + i).classList.add("error");
             error = true;
         } else document.getElementById("question" + i).classList.remove("error");
+    }
 
+    if(form == 'teacher') {
+        const dropdownList = document.getElementById("dropdown73");
+        const selectedOption = dropdownList.options[dropdownList.selectedIndex];
+
+        if(selectedOption.value == '') {
+            document.getElementById("question73").classList.add("error");
+            error = true;
+        } else document.getElementById("question73").classList.remove("error");
     }
 
     if(error) {
